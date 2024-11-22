@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     # OpenAPI
     "drf_spectacular",
+    # Habilita home application
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -173,3 +175,6 @@ SPECTACULAR_SETTINGS = {
         "persistAuthorization": True,  # Mantém a autorização no Swagger UI durante as requisições
     },
 }
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
